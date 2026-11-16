@@ -1,0 +1,35 @@
+name: Starter checks
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  check:
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-24.04, macos-15]
+    runs-on: ${{ matrix.os }}
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v7.0.1
+      - uses: astral-sh/setup-uv@v10.3.3
+        with:
+          enable-cache: true
+      - name: Prepare locked Python environment
+        run: uv sync --locked
+      - name: Check Python style
+        run: |
+          uv run ruff check .
+          uv run ruff format --check .
+      # No Kickstart ROM is available here, so the emulator checks skip.
+      - name: Test without firmware
+        run: uv run pytest --cov -ra
+      - name: Write the reference index without books or firmware
+        run: |
+          uv run python scripts/setup.py --guidance-only
+          test -f local/INDEX.md
+          git check-ignore local/INDEX.md
+          test -z "$(git status --porcelain --untracked-files=all)"
