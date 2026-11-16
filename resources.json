@@ -1,0 +1,16 @@
+[
+  {
+    "id": "m68000-prm",
+    "title": "M68000 Family Programmer's Reference Manual (Motorola, NXP M68000PRM)",
+    "url": "https://web.archive.org/web/20261107182138id_/https://www.nxp.com/docs/en/reference-manual/M68000PRM.pdf",
+    "sha256": "06e4864b78da0e815054cead9326b7ec9914661f240fd39a455f2061ff47c4e8",
+    "redistribution": "NXP publishes this manual for free download. The starter fetches an Internet Archive capture of the NXP address, because NXP refuses automated downloads. The repository does not hold or redistribute the file."
+  },
+  {
+    "id": "m68000-um",
+    "title": "M68000 8-/16-/32-Bit Microprocessors User's Manual (Motorola, NXP MC68000UM)",
+    "url": "https://web.archive.org/web/20261112012344id_/https://www.nxp.com/docs/en/reference-manual/MC68000UM.pdf",
+    "sha256": "89b690b1923f8a3cff508567090bcab0bcd07511c2deff8ffa393a08efda18e1",
+    "redistribution": "NXP publishes this manual for free download. The starter fetches an Internet Archive capture of the NXP address, because NXP refuses automated downloads. The repository does not hold or redistribute the file."
+  }
+]
