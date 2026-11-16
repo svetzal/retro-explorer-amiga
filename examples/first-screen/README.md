@@ -71,7 +71,7 @@ uv run python scripts/amiga.py check examples/first-screen
 `run` opens Amiberry in a window. Close the window to stop it.
 
 `check` runs on both targets in [amiga.toml](amiga.toml). Each target uses
-PAL. On each target it compares these results with [expected.py](expected.py):
+NTSC. On each target it compares these results with [expected.py](expected.py):
 
 - Memory: the 28 bytes of the copper list at the address that the program
   writes at `$108`.

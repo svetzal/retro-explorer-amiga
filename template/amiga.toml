@@ -8,7 +8,7 @@ cpu = "68000"
 [targets.a500]
 model = "A500"
 kickstart = ["kick13"]
-video = "pal"
+video = "ntsc"
 cpu = "68000"
 chipset = "ocs"
 chip_kib = 512

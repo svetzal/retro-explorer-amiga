@@ -33,7 +33,7 @@ of the owner.
 - CPU: 68000 at the stock clock (starter default)
 - Chipset: OCS (starter default)
 - Memory: 512 KiB chip RAM and 512 KiB slow RAM (starter default)
-- Video standard: PAL (starter default)
+- Video standard: NTSC (starter default)
 - Firmware: Kickstart 1.3, `kick13` (starter default)
 - Deliverable: a bootable OFS floppy image whose startup-sequence runs the
   program (starter default)

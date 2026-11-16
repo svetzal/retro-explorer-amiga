@@ -126,7 +126,7 @@ settings. For the `a500` target, the command line is equal to:
 
 ```sh
 HOME=local/amiberry-home Amiberry --model A500 -r local/roms/kick13.rom \
-  -0 build/<project>/<project>.adf -s ntsc=false -s cpu_model=68000 \
+  -0 build/<project>/<project>.adf -s ntsc=true -s cpu_model=68000 \
   -s chipset=ocs -s chipmem_size=1 -s bogomem_size=2 -s fastmem_size=0 -G
 ```
 
@@ -137,11 +137,11 @@ HOME=local/amiberry-home Amiberry --model A500 -r local/roms/kick13.rom \
 
 | Target | Model | Kickstart | CPU | Chipset | Memory | Video |
 | --- | --- | --- | --- | --- | --- | --- |
-| `a500` (default) | Amiga 500 | 1.3 | 68000 | OCS | 512 KiB chip, 512 KiB slow | PAL |
-| `a1200` | Amiga 1200 | 3.1, or 3.2 | 68020 | AGA | 2 MiB chip | PAL |
+| `a500` (default) | Amiga 500 | 1.3 | 68000 | OCS | 512 KiB chip, 512 KiB slow | NTSC |
+| `a1200` | Amiga 1200 | 3.1, or 3.2 | 68020 | AGA | 2 MiB chip | NTSC |
 
-PAL is a starter default. It is not a fact about the owner's machine. Record the video standard of the owner in the
-contract. Use `video = "ntsc"` when the owner's machine or request is NTSC.
+NTSC is a starter default. It is not a fact about the owner's machine. Record the video standard of the owner in the
+contract. Use `video = "ntsc"` when the owner's machine or request is PAL.
 The first-screen check passes on both standards.
 
 The `a1200` target accepts Kickstart 3.1 or 3.2. The check uses the first ROM
@@ -157,7 +157,7 @@ in the contract.
 [targets.a500]
 model = "A500"
 kickstart = ["kick13"]
-video = "pal"
+video = "ntsc"
 cpu = "68000"
 chipset = "ocs"
 chip_kib = 512
@@ -167,7 +167,7 @@ fast_kib = 0
 [targets.a1200]
 model = "A1200"
 kickstart = ["kick31-a1200", "kick32-a1200"]
-video = "pal"
+video = "ntsc"
 cpu = "68020"
 chipset = "aga"
 chip_kib = 2048

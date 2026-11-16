@@ -7,7 +7,7 @@ cpu = "68000"
 [targets.a500]
 model = "A500"
 kickstart = ["kick13"]
-video = "pal"
+video = "ntsc"
 cpu = "68000"
 chipset = "ocs"
 chip_kib = 512
@@ -17,7 +17,7 @@ fast_kib = 0
 [targets.a1200]
 model = "A1200"
 kickstart = ["kick31-a1200", "kick32-a1200"]
-video = "pal"
+video = "ntsc"
 cpu = "68020"
 chipset = "aga"
 chip_kib = 2048
