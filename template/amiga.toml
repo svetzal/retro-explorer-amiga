@@ -1,0 +1,20 @@
+# Settings for scripts/amiga.py. Paths are relative to this folder.
+# Keep these settings the same as the contract in README.md.
+source = "main.s"
+cpu = "68000"
+
+# The first target is the default. Copy other tables from
+# guidance/starter/toolchain.md#target-tables.
+[targets.a500]
+model = "A500"
+kickstart = ["kick13"]
+video = "pal"
+cpu = "68000"
+chipset = "ocs"
+chip_kib = 512
+slow_kib = 512
+fast_kib = 0
+
+[check]
+checkpoint = 1
+seconds = 60

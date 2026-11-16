@@ -1,0 +1,44 @@
+# Settings for scripts/amiga.py. Paths are relative to this folder.
+source = "main.s"
+cpu = "68000"
+
+# The first target is the default. Copied from the target tables in
+# guidance/starter/toolchain.md.
+[targets.a500]
+model = "A500"
+kickstart = ["kick13"]
+video = "pal"
+cpu = "68000"
+chipset = "ocs"
+chip_kib = 512
+slow_kib = 512
+fast_kib = 0
+
+[targets.a1200]
+model = "A1200"
+kickstart = ["kick31-a1200", "kick32-a1200"]
+video = "pal"
+cpu = "68020"
+chipset = "aga"
+chip_kib = 2048
+slow_kib = 0
+fast_kib = 0
+
+# Failure controls: each check must FAIL. The spec beside scripts/amiga.py runs them.
+[variants.wrong-colour]
+defines = ["WRONG_COLOUR"]
+control = true
+
+[variants.copper-off]
+defines = ["COPPER_OFF"]
+control = true
+
+[variants.no-checkpoint]
+defines = ["NO_CHECKPOINT"]
+control = true
+
+[check]
+checkpoint = 1
+seconds = 30
+# The copper list, at the address the program writes at $108.
+memory = { copper = { at = "data", size = 28 } }

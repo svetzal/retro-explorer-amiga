@@ -27,8 +27,7 @@ Each example README gives the commands for that example.
 
 | Task | Example | Targets | Scope |
 | --- | --- | --- | --- |
-
-There are no examples yet. [PLAN.md](../PLAN.md) records the open work.
+| Put a known picture on the screen | [first-screen](first-screen/README.md) | `a500`, `a1200` | A copper list sets the background on three bands of lines. No bitplanes. |
 
 A result on one emulator configuration does not establish another model or
 physical hardware. Each example names its own targets and the procedure that
