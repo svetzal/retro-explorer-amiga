@@ -15,6 +15,10 @@ snapshot boots the ADF headless, runs to the checkpoint and saves the
 check    does the same on every [targets.<name>] table (or --target), compares
          each kind of evidence with expected.py, and reports each kind apart.
 
+check uses the main build. --variant <name> builds with the variant's
+defines and runs on its targets. A variant with control = true is a failure
+control: its check must fail.
+
 Checkpoints. Amiberry 8.5.0 has no checkpoint that the tool can set before
 the program is loaded, so the program reports its own: it writes a long at
 $104 (the checkpoint number) and at $108 (an address it wants checked), then
@@ -81,7 +85,7 @@ class Target(BaseModel):
     kickstart: list[str] = Field(min_length=1)
     video: Literal["pal", "ntsc"]
     cpu: str
-    chipset: Literal["ocs", "ecs_agnus", "ecs", "aga"]
+    chipset: Literal["ocs", "ecs_agnus", "ecs_denise", "ecs", "aga"]
     chip_kib: int = Field(gt=0, multiple_of=512)
     slow_kib: int = Field(ge=0, multiple_of=256)
     fast_kib: int = Field(ge=0, multiple_of=1024)
