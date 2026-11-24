@@ -8,6 +8,15 @@ ends. [The system guide](guidance/starter/system.md) gives the procedure.
 
 ## [Unreleased]
 
+## [0.2.1] - 2026-11-24
+
+<!-- markdownlint-configure-file { "MD024": { "siblings_only": true } } -->
+
+### Added
+
+- The reference guide lists Commodore documents for the custom chips and
+  sources for game and demo graphics. It links to available Wayback copies.
+
 ## [0.2.0] - 2026-11-16
 
 This is the first release. The git history has the changes before it.
