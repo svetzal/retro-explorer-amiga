@@ -12,5 +12,146 @@
     "url": "https://web.archive.org/web/20261112012344id_/https://www.nxp.com/docs/en/reference-manual/MC68000UM.pdf",
     "sha256": "89b690b1923f8a3cff508567090bcab0bcd07511c2deff8ffa393a08efda18e1",
     "redistribution": "NXP publishes this manual for free download. The starter fetches an Internet Archive capture of the NXP address, because NXP refuses automated downloads. The repository does not hold or redistribute the file."
+  },
+  {
+    "id": "amiga-hardware-reference-manual",
+    "kind": "web",
+    "title": "Amiga Hardware Reference Manual",
+    "citation": "Commodore-Amiga, Inc. Third edition. Addison-Wesley, 1991. ISBN 978-0-201-56776-2.",
+    "accessed": "2026-11-24",
+    "notes": "Chapter 2 covers the Copper. Chapters 3 and 4 cover playfields, scrolling and sprites. Chapters 6 and 7 cover the Blitter and DMA. Appendices A and B list custom registers. Appendix C covers ECS.",
+    "url": "https://amigadev.elowar.com/read/ADCD_2.1/Hardware_Manual_guide/node0000.html",
+    "archive_url": "https://web.archive.org/web/20260918032020/http://amigadev.elowar.com/read/ADCD_2.1/Hardware_Manual_guide/node0000.html",
+    "related_links": {
+      "Book record": "https://books.google.com/books/about/Amiga_Hardware_Reference_Manual.html?id=ozOPQgAACAAJ"
+    }
+  },
+  {
+    "id": "amiga-aa-chipset",
+    "kind": "web",
+    "title": "Functional Specification for the Advanced Amiga Chip Set (AA)",
+    "citation": "Commodore Electronics Ltd., 1991-05-08. Editor R. Raible. Contributor S. Shanson.",
+    "accessed": "2026-11-24",
+    "notes": "This preliminary specification covers bitplane fetch modes, palette registers, HAM8, sprites and fine scrolling. Compare A1200 details with the service addendum.",
+    "url": "https://shanson.com/spencer/Amiga-AA-Chipset.pdf"
+  },
+  {
+    "id": "amiga-a1200-service-addendum",
+    "kind": "web",
+    "title": "A1200 User’s Guide Service Addendum",
+    "citation": "Commodore Business Machines, Inc., January 1993. Document 400432-01.",
+    "accessed": "2026-11-24",
+    "notes": "Chapter 5, pages 5-3 to 5-5, describes Alice, Lisa and Paula and lists the AGA video features.",
+    "url": "https://www.valoroso.it/file-share/documenti-manuali/Commodore-Amiga-1200-service-addendum-schematics.pdf"
+  },
+  {
+    "id": "amiga-lisa-specification",
+    "kind": "web",
+    "title": "Integrated Circuit Specification for the Lisa Display Controller",
+    "citation": "Commodore Electronics Ltd., 1991-08-15. Part 391227-01.",
+    "accessed": "2026-11-24",
+    "notes": "Section 1.1 lists changes from ECS Denise. Section 3 covers signal timing.",
+    "url": "https://amigawiki.de/lib/exe/fetch.php?media=de%3Aparts%3Aaa_lisa_specification.pdf"
+  },
+  {
+    "id": "scrolling-trick",
+    "kind": "web",
+    "title": "ScrollingTrick",
+    "citation": "Georg Steger. Version 1.0. Aminet, 1999.",
+    "accessed": "2026-11-24",
+    "notes": "The package has a guide and C examples for horizontal, vertical and eight-direction tile scrolling. The examples draw incoming tiles in steps. The author lists AmigaOS 3.0 and OCS, ECS or AGA.",
+    "url": "https://ftp.fau.de/aminet/dev/src/ScrollingTrick.readme",
+    "archive_url": "https://web.archive.org/web/20260421172002/http://aminet.net/package/dev/src/ScrollingTrick",
+    "content": {
+      "format": "txt",
+      "url": "https://ftp.fau.de/aminet/dev/src/ScrollingTrick.readme"
+    }
+  },
+  {
+    "id": "solid-gold-interview",
+    "kind": "web",
+    "title": "AMIcast - Text Interview 4",
+    "citation": "Frank Wille. AMIcast, February 2016.",
+    "accessed": "2026-11-24",
+    "notes": "Answer 6 describes how Steger’s scrolling example informed Solid Gold. Wille describes tile animation, hardware sprites for text and an engine for Blitter objects (BOBs).",
+    "url": "https://www.amigapodcast.com/2016/02/amicast-text-interview-4-frank-wille.html",
+    "content": {
+      "format": "html",
+      "url": "https://www.amigapodcast.com/2016/02/amicast-text-interview-4-frank-wille.html"
+    }
+  },
+  {
+    "id": "photon-amiga-hardware-programming",
+    "kind": "web",
+    "title": "Amiga Hardware Programming",
+    "citation": "Photon of Scoopex. Coppershade, undated.",
+    "accessed": "2026-11-24",
+    "notes": "The AsmSkool series starts with a first assembly program and ends with a complete demo. The site indexes the author’s articles about graphics effects for Amiga Future.",
+    "url": "https://coppershade.org/",
+    "archive_url": "https://web.archive.org/web/20261011033228/https://coppershade.org/",
+    "content": {
+      "format": "html",
+      "url": "https://web.archive.org/web/20261011033228id_/https://coppershade.org/"
+    }
+  },
+  {
+    "id": "kalms-chunky-to-planar",
+    "kind": "web",
+    "title": "Chunky 2 Planar Tutorial",
+    "citation": "Mikael Kalms (Scout). Editing by Neure. HTML by Azure. 1997.",
+    "accessed": "2026-11-24",
+    "notes": "The tutorial shows how to transpose blocks of pixel bits into bitplanes.",
+    "url": "https://www.lysator.liu.se/~mikaelk/doc/c2ptut/",
+    "archive_url": "https://web.archive.org/web/20260522063016/http://www.lysator.liu.se/~mikaelk/doc/c2ptut/",
+    "content": {
+      "format": "html",
+      "url": "https://www.lysator.liu.se/~mikaelk/doc/c2ptut/"
+    }
+  },
+  {
+    "id": "inside-the-machine",
+    "kind": "web",
+    "title": "Inside the Machine",
+    "citation": "Graham Bates. Gigabates, 2024-10-23.",
+    "accessed": "2026-11-24",
+    "notes": "The programmer explains Blitter-based chunky-to-planar conversion, Hold-And-Modify effects, rotozoom and texture mapping on OCS. The article links to the demo source code.",
+    "url": "https://blog.grahambates.com/posts/inside-the-machine/",
+    "archive_url": "https://web.archive.org/web/20260825030843/https://blog.grahambates.com/posts/inside-the-machine/",
+    "content": {
+      "format": "html",
+      "url": "https://blog.grahambates.com/posts/inside-the-machine/"
+    }
+  },
+  {
+    "id": "copper-chunky",
+    "kind": "web",
+    "title": "Copper Chunky",
+    "citation": "Jeroen Knoester. Power Programs, undated. Example code dated 2021.",
+    "accessed": "2026-11-24",
+    "notes": "The article explains how Copper lists create a display for zoom and rotation effects. The example depends on PAL timing.",
+    "url": "https://www.powerprograms.nl/amiga/copper-chunky.html",
+    "content": {
+      "format": "html",
+      "url": "https://www.powerprograms.nl/amiga/copper-chunky.html"
+    }
+  },
+  {
+    "id": "gloom-renderer",
+    "kind": "web",
+    "title": "Gloom",
+    "citation": "Mark Sibly. Black Magic, 1995. GloomAmiga source archive, May 2017.",
+    "accessed": "2026-11-24",
+    "notes": "The makewalls routine orders nearby wall segments from near to far. The castwalls routine uses a table of ray rotations to find a hit for each screen column. The hit position selects a texture column. The hit depth sets the strip height and shade. The renderwalls routine uses drawstrip_ to clip strips and write colours into a Copper list. The archive describes the source as a historical snapshot of uncertain completeness.",
+    "url": "https://github.com/earok/GloomAmiga",
+    "archive_url": "https://web.archive.org/web/20170605225532/https://github.com/earok/GloomAmiga",
+    "related_links": {
+      "Wall selection": "https://github.com/earok/GloomAmiga/blob/179b8762c3754594dde9c40f2b3ef1fcaee028e4/gloom.s#L6136-L6192",
+      "Raycasting": "https://github.com/earok/GloomAmiga/blob/179b8762c3754594dde9c40f2b3ef1fcaee028e4/gloom.s#L6679-L6859",
+      "Strip drawing": "https://github.com/earok/GloomAmiga/blob/179b8762c3754594dde9c40f2b3ef1fcaee028e4/gloom.s#L6936-L7078"
+    },
+    "content": {
+      "format": "txt",
+      "url": "https://raw.githubusercontent.com/earok/GloomAmiga/179b8762c3754594dde9c40f2b3ef1fcaee028e4/gloom.s"
+    }
   }
 ]

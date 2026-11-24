@@ -14,7 +14,7 @@ explains the tools and the evidence.
 | `setup.py --target T --firmware-only` | Copies the target's Kickstart ROM from the owner's product into `local/roms/`, and does a check of it |
 | `setup.py --guidance-only` | Writes `local/INDEX.md` without a download |
 | `setup.py --list` | Lists the sources in `resources.json` |
-| `setup.py --resource ID [--pages FIRST:LAST]` | Downloads one source and converts its pages |
+| `setup.py --resource ID` | Caches a source. PDF option `--pages FIRST:LAST`. |
 | `doctor.py [--target T]` | Checks the tools, the isolation of Amiberry and the target's ROM. It does not boot the machine |
 | `amiga.py build <folder>` | Assembles `main.s` and writes `build/<project>/<project>.adf` |
 | `amiga.py run <folder>` | Checks the ROM and opens Amiberry in a window |
@@ -26,9 +26,9 @@ explains the tools and the evidence.
 
 ## Reference downloads and conversion
 
-`resources.json` gives each source, its SHA-256 value and its redistribution
-status. Setup refuses a download whose checksum differs. It keeps the PDF in
-`local/references/<id>/source.pdf`.
+`resources.json` lists PDFs and web references. PDF entries give a SHA-256
+value and a redistribution status. Setup checks the value before it uses the
+PDF. It keeps the PDF in `local/references/<id>/source.pdf`.
 
 Docling converts the PDF one page at a time, with OCR. Each page is a
 checkpoint, so an interrupted conversion continues from the last complete
@@ -38,7 +38,7 @@ page. The result is:
   converted page, with links to the page images.
 - `local/references/<id>/docling-pages/<key>/images/`: a full image of each
   page and an image of each figure.
-- `local/INDEX.md`: each source, and how many of its pages are converted.
+- `local/INDEX.md`: each source and the PDF pages that setup converted.
 
 Convert a page range first. Convert more pages when you know where the topic
 is:
@@ -47,8 +47,19 @@ is:
 uv run python scripts/setup.py --resource m68000-um --pages 1:12
 ```
 
-Licensed manuals, such as the Amiga Hardware Reference Manual, are not in
-`resources.json`. The starter does not download them.
+For a web entry, use `content.url` to name the direct download address.
+Set `content.format` to `html` for a web page or `txt` for plain text or code.
+Setup saves the original bytes in `local/references/<id>/`. The index links
+to the local copy, the cited source and any Wayback copy. Setup reuses the
+file on the next run. To get a fresh copy from the same URL, remove the
+cached file.
+
+```sh
+uv run python scripts/setup.py --resource gloom-renderer
+```
+
+A web entry with no `content` gives a citation only. Use this form for a
+licensed manual. The index links to that source.
 
 ## Measured limits
 

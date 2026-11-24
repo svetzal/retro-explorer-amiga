@@ -8,14 +8,17 @@ ends. [The system guide](guidance/starter/system.md) gives the procedure.
 
 ## [Unreleased]
 
-## [0.2.1] - 2026-11-24
+## [0.3.0] - 2026-11-24
 
 <!-- markdownlint-configure-file { "MD024": { "siblings_only": true } } -->
 
 ### Added
 
-- The reference guide lists Commodore documents for the custom chips and
-  sources for game and demo graphics. It links to available Wayback copies.
+- The resource manifest lists web references alongside PDFs. Use
+  `setup.py --list` to find Commodore documents and sources for game and
+  demo graphics. The local reference index includes links to Wayback copies.
+- Use `setup.py --resource ID` to cache HTML, plain text and source code.
+  The index links to each local copy.
 
 ## [0.2.0] - 2026-11-16
 

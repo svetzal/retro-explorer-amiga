@@ -88,109 +88,35 @@ register layout of a Amiga chip. Where the local books do not establish a fact,
 find the technical manual or datasheet that does. Add it to `resources.json`
 when it will help later work.
 
-Some Amiga manuals are licensed material. The owner points the starter at
-their own copy, in the same way as the Kickstart ROM. Read
-[firmware and launching](toolchain.md#firmware-and-launching). Other sources
-are free to download, and `resources.json` gives their location. Never
-download licensed material from an unofficial copy on the internet. When a
-licensed source is not available, tell the owner which source would answer
-the question.
+For a web reference, record its citation, access date and scope in a
+`kind: "web"` entry. Include a checked Wayback link when one exists. If
+setup can download the source, give the direct file URL and format in
+`content`. For code on GitHub, use a raw file URL for a specific commit.
+
+Some Amiga manuals are licensed material. Use the owner's licensed copy for
+local work. Never download licensed material from an unofficial copy on the
+internet. When a licensed source is unavailable, tell the owner which source
+would answer the question.
 
 ## References for Amiga graphics
 
-Read the Commodore references for register definitions and chipset limits.
-Use the game and demo sources to find examples of how programmers use the
-hardware. The access date for the sources below is 2026-11-24.
+The [resource manifest](../../resources.json) holds the citations and
+Wayback links for Amiga graphics. Start with these resource IDs:
 
-### Commodore hardware documents
-
-- **OCS and ECS.** Commodore-Amiga, Inc., *Amiga Hardware Reference Manual*,
-  third edition, Addison-Wesley, 1991, ISBN 978-0-201-56776-2. Chapter 2 covers
-  the Copper. Chapters 3 and 4 cover playfields, scrolling and sprites.
-  Chapters 6 and 7 cover the Blitter and DMA. Appendices A and B list the
-  custom registers. Appendix C covers ECS.
-  [Book record][hrm-book] · [Developer CD contents][hrm-html] ·
-  [Wayback copy of the contents][hrm-archive]
-- **AGA programming.** Commodore Electronics Ltd., *Functional Specification
-  for the Advanced Amiga Chip Set (AA)*, 1991-05-08, edited by R. Raible with
-  contributions from S. Shanson. The preliminary specification covers bitplane
-  fetch modes, palette registers, HAM8, sprites and fine scrolling. For A1200
-  details, compare it with the A1200 service addendum.
-  [Engineering scan][aa-spec]
-- **A1200 hardware.** Commodore Business Machines, Inc., *A1200 User’s Guide
-  Service Addendum*, January 1993, document 400432-01. Chapter 5, pages 5-3
-  to 5-5, describes Alice, Lisa and Paula and lists the AGA video features.
-  [Service addendum scan][a1200-service]
-- **Lisa timing.** Commodore Electronics Ltd., *Integrated Circuit
-  Specification for the Lisa Display Controller*, 1991-08-15, part 391227-01.
-  Section 1.1 lists changes from ECS Denise. Section 3 covers signal timing.
-  [Lisa specification scan][lisa-spec]
-
-### Game and demo graphics
-
-- **Tile scrolling in eight directions.** Georg Steger, *ScrollingTrick* 1.0,
-  Aminet, 1999. The author’s package has a guide and C examples for horizontal,
-  vertical and eight-direction scrolling. The examples draw incoming tiles in
-  steps. The author lists AmigaOS 3.0 and OCS, ECS or AGA for the examples.
-  [Aminet mirror readme][scroll-readme] · [Wayback package page][scroll-archive]
-- **Scrolling and moving objects in an A500 game.** Frank Wille, *AMIcast -
-  Text Interview 4*, February 2016. In answer 6, Wille explains how Steger’s
-  scrolling example informed *Solid Gold*. He also describes tile animation,
-  hardware sprites for text and an engine for Blitter objects (BOBs).
-  [Developer interview][solid-gold]
-- **Assembly tutorials.** Photon of Scoopex, *Amiga Hardware Programming*,
-  Coppershade, undated. The AsmSkool series goes from a first assembly program
-  to a complete demo. The site also indexes the author’s articles about
-  graphics effects for *Amiga Future*.
-  [Coppershade][photon] · [Wayback copy][photon-archive]
-- **Chunky-to-planar conversion.** Mikael Kalms (Scout), with editing by Neure
-  and HTML by Azure, *Chunky 2 Planar Tutorial*, 1997. The tutorial shows how
-  to transpose blocks of pixel bits into bitplanes.
-  [Author’s copy][kalms] · [Wayback copy][kalms-archive]
-- **Effects on an OCS Amiga.** Graham Bates, *Inside the Machine*, Gigabates,
-  2024-10-23. The demo programmer explains Blitter-based chunky-to-planar
-  conversion, Hold-And-Modify effects, rotozoom and texture mapping. The
-  article describes the effects and links to the demo source code.
-  [Developer article][bates] · [Wayback copy][bates-archive]
-- **Copper effects on PAL.** Jeroen Knoester, *Copper Chunky*, Power Programs,
-  undated page with example code dated 2021. The author explains how Copper
-  lists create a display for zoom and rotation effects. The example depends
-  on PAL timing.
-  [Developer article][copper-chunky]
-- **Raycasting and wall textures.** Mark Sibly, *Gloom* (Black Magic, 1995).
-  The `GloomAmiga` source archive on GitHub dates to May 2017. In `gloom.s`,
-  `makewalls` collects nearby wall segments and orders them from near to far.
-  `castwalls` uses a table of ray rotations to find a wall hit for each
-  screen column. The position along the wall selects a texture column.
-  The hit depth sets the strip height and shade. `renderwalls` uses
-  `drawstrip_` to clip each strip and write colours into a Copper list.
-  The archive describes the source as a historical snapshot of uncertain
-  completeness.
-  [Wall selection][gloom-walls] · [Raycasting][gloom-cast] ·
-  [Strip drawing][gloom-render] · [Wayback repository][gloom-archive]
-
-[hrm-book]: https://books.google.com/books/about/Amiga_Hardware_Reference_Manual.html?id=ozOPQgAACAAJ
-[hrm-html]: https://amigadev.elowar.com/read/ADCD_2.1/Hardware_Manual_guide/node0000.html
-[hrm-archive]: https://web.archive.org/web/20260918032020/http://amigadev.elowar.com/read/ADCD_2.1/Hardware_Manual_guide/node0000.html
-[aa-spec]: https://shanson.com/spencer/Amiga-AA-Chipset.pdf
-[a1200-service]: https://www.valoroso.it/file-share/documenti-manuali/Commodore-Amiga-1200-service-addendum-schematics.pdf
-[lisa-spec]: https://amigawiki.de/lib/exe/fetch.php?media=de%3Aparts%3Aaa_lisa_specification.pdf
-[scroll-readme]: https://ftp.fau.de/aminet/dev/src/ScrollingTrick.readme
-[scroll-archive]: https://web.archive.org/web/20260421172002/http://aminet.net/package/dev/src/ScrollingTrick
-[solid-gold]: https://www.amigapodcast.com/2016/02/amicast-text-interview-4-frank-wille.html
-[photon]: https://coppershade.org/
-[photon-archive]: https://web.archive.org/web/20261011033228/https://coppershade.org/
-[kalms]: https://www.lysator.liu.se/~mikaelk/doc/c2ptut/
-[kalms-archive]: https://web.archive.org/web/20260522063016/http://www.lysator.liu.se/~mikaelk/doc/c2ptut/
-[bates]: https://blog.grahambates.com/posts/inside-the-machine/
-[bates-archive]: https://web.archive.org/web/20260825030843/https://blog.grahambates.com/posts/inside-the-machine/
-[copper-chunky]: https://www.powerprograms.nl/amiga/copper-chunky.html
-[gloom-walls]: https://github.com/earok/GloomAmiga/blob/179b8762c3754594dde9c40f2b3ef1fcaee028e4/gloom.s#L6136-L6192
-[gloom-cast]: https://github.com/earok/GloomAmiga/blob/179b8762c3754594dde9c40f2b3ef1fcaee028e4/gloom.s#L6679-L6859
-[gloom-render]: https://github.com/earok/GloomAmiga/blob/179b8762c3754594dde9c40f2b3ef1fcaee028e4/gloom.s#L6936-L7078
-[gloom-archive]: https://web.archive.org/web/20170605225532/https://github.com/earok/GloomAmiga
+- `amiga-hardware-reference-manual` for the Copper, Blitter, playfields and
+  sprites on OCS and ECS.
+- `amiga-aa-chipset`, `amiga-a1200-service-addendum` and
+  `amiga-lisa-specification` for AGA.
+- `scrolling-trick`, `inside-the-machine` and `gloom-renderer` for examples
+  from game and demo programmers.
 
 ## Find the relevant passage
+
+For a web source, open the local copy from `local/INDEX.md`. If the index
+shows a cache command, run it to get the file. Read HTML and source code as
+text. Cite the original URL and the relevant section or lines.
+
+For a PDF, use these steps.
 
 1. Read `local/INDEX.md` to choose a source and check its converted pages.
 
@@ -230,9 +156,8 @@ person's inspection. Defer the dependent code until then.
 
 ## When the reference is not ready
 
-An entry in the manifest or the index that is not converted is not available
-reference content. Obtain and convert the pages that you need. The
-[scripts README](../../scripts/README.md) gives the commands.
+The index shows which sources have local copies. To fill the cache, use
+the commands in the [scripts README](../../scripts/README.md).
 
 If only a sample range is converted, read the contents or the index of the
 source to find the chapter. Then convert that range.
